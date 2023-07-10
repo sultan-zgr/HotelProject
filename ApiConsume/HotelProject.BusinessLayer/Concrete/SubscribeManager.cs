@@ -20,29 +20,27 @@ namespace HotelProject.BusinessLayer.Concrete
 
         public void TDelete(Subscribe t)
         {
-            _subscribeDal.Delete(t);
+            _subscribeDal.Delete(t);    
         }
 
         public Subscribe TGetByID(int id)
         {
-            throw new NotImplementedException();
-
+            return _subscribeDal.GetByID(id);
         }
 
         public List<Subscribe> TGetList()
         {
-            throw new NotImplementedException();
-
+            return new List<Subscribe>();   
         }
 
         public void TInsert(Subscribe t)
         {
-            throw new NotImplementedException();
+            _subscribeDal.Insert(t);
         }
 
         public void TUpdate(Subscribe t)
         {
-            throw new NotImplementedException();
+            _subscribeDal.Update(t);
         }
     }
 }
