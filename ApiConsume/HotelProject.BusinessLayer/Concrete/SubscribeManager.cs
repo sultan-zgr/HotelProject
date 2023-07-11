@@ -30,7 +30,7 @@ namespace HotelProject.BusinessLayer.Concrete
 
         public List<Subscribe> TGetList()
         {
-            return new List<Subscribe>();   
+            return _subscribeDal.GetList();  
         }
 
         public void TInsert(Subscribe t)

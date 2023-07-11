@@ -20,7 +20,7 @@ namespace HotelProject.BusinessLayer.Concrete
 
         public void TDelete(Service t)
         {
-            throw new NotImplementedException();
+            _servicesDal.Delete(t);
         }
 
         public Service TGetByID(int id)
@@ -30,17 +30,17 @@ namespace HotelProject.BusinessLayer.Concrete
 
         public List<Service> TGetList()
         {
-            throw new NotImplementedException();
+            return _servicesDal.GetList();
         }
 
         public void TInsert(Service t)
         {
-            throw new NotImplementedException();
+            _servicesDal.Insert(t);
         }
 
         public void TUpdate(Service t)
         {
-            throw new NotImplementedException();
+            _servicesDal.Update(t);
         }
     }
 }
