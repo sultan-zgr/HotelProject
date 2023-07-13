@@ -7,44 +7,44 @@ namespace HotelProject.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RoomController : ControllerBase
+    public class AboutController : ControllerBase
     {
-      private readonly IRoomService _roomService;
+        private readonly IAboutService _aboutService;
 
-        public RoomController(IRoomService roomService)
+        public AboutController(IAboutService aboutService)
         {
-            _roomService = roomService;
+            _aboutService = aboutService;
         }
 
         [HttpGet]
         public IActionResult StaffList()
         {
-            var values = _roomService.TGetList();
+            var values = _aboutService.TGetList();
             return Ok(values);
         }
         [HttpPost]
-        public IActionResult AddStaff(Room room)
+        public IActionResult AddStaff(About About)
         {
-            _roomService.TInsert(room);
+            _aboutService.TInsert(About);
             return Ok();
         }
         [HttpDelete("{id}")]
         public IActionResult DeleteStaff(int id)
         {
-            var values = _roomService.TGetByID(id);
-            _roomService.TDelete(values);
+            var values = _aboutService.TGetByID(id);
+            _aboutService.TDelete(values);
             return Ok();
         }
         [HttpPut]
-        public IActionResult UpdateStaff(Room room)
+        public IActionResult UpdateStaff(About About)
         {
-            _roomService.TUpdate(room);
+            _aboutService.TUpdate(About);
             return Ok();
         }
         [HttpGet("{id}")]
         public IActionResult GetStaff(int id)
-        {
-            var values = _roomService.TGetByID(id);
+        {   
+            var values = _aboutService.TGetByID(id);
             return Ok(values);
         }
     }
