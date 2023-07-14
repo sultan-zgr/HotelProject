@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace HotelProject.WebUI.ViewComponents.Default
 {
-    public class _AboutUsPartial : ViewComponent
+    public class _AboutPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _AboutUsPartial(IHttpClientFactory httpClientFactory)
+        public _AboutPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }

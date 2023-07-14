@@ -33,4 +33,3 @@ namespace HotelProject.WebUI.ViewComponents.Default
         }
     }
 }
-}
